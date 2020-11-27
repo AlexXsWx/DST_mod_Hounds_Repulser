@@ -1,0 +1,7 @@
+<Atlas>
+    <Texture filename="warg_tail.tex" />
+    <Elements>
+        <!-- <Element name="warg_tail.tex" u1="(32-10)/127" u2="(32+63+10)/127" v1="22/127" v2="(22+83)/127" /> -->
+        <Element name="warg_tail.tex" u1="0.1732283464566929" u2="0.8267716535433071" v1="0.1732283464566929" v2="0.8267716535433071" />
+    </Elements>
+</Atlas>
