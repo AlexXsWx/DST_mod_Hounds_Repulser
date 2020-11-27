@@ -9,7 +9,7 @@ local function fn()
 
     inst.entity:AddTransform()
     inst.entity:AddAnimState()
-    inst.entity:AddNetwork() --
+    inst.entity:AddNetwork()
 
     MakeInventoryPhysics(inst)
 
