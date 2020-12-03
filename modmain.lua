@@ -33,6 +33,14 @@ local function activateRepulser(inst)
     -- TODO: find or make a more appropriate sound
     inst.SoundEmitter:PlaySound("dontstarve/characters/wurt/merm/throne/build")
 
+    local shakeMode = GLOBAL.CAMERASHAKE.FULL
+    local shakeDuration = 3
+    local shakeSpeed = .02
+    local shakeScale = 1
+    for i, v in ipairs(GLOBAL.AllPlayers) do
+        v:ShakeCamera(shakeMode, shakeDuration, shakeSpeed, shakeScale)
+    end
+
     inst:RemoveComponent("constructionsite")
     inst:RemoveTag("constructionsite")
 
