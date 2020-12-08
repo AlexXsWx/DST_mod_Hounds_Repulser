@@ -1,7 +1,7 @@
 name = "Hounds repulser (buildable)"
 description = "Stop hound waves for good by using Warg's tail and 360 hounds teeth on a hound mound"
 author = "AlexXsWx"
-version = "0.0.3"
+version = "1.0.0"
 
 api_version = 6
 api_version_dst = 10
