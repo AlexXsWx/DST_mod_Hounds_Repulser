@@ -6,7 +6,10 @@ PrefabFiles = {
 
 local function wargPostInit(inst)
     if GLOBAL.TheWorld.ismastersim then
-        inst.components.lootdropper:AddChanceLoot("warg_tail", 1)
+        local dropChance = GetModConfigData("WargTailDropChance") / 100
+        if dropChance > 0 then
+            inst.components.lootdropper:AddChanceLoot("warg_tail", dropChance)
+        end
     end
 end
 AddPrefabPostInit("warg", wargPostInit)
@@ -14,14 +17,23 @@ AddPrefabPostInit("warg", wargPostInit)
 --
 
 -- Prefab that will get the construction modifier
--- local target_prefab = "eyeturret"
-local target_prefab = "houndmound"
+local target_prefab = GetModConfigData("RepulserConstructionTarget")
+
 
 -- Construction Recipe for the repulser activation
-GLOBAL.CONSTRUCTION_PLANS[target_prefab] = {
-    Ingredient("warg_tail", 1),
-    Ingredient("houndstooth", 360) -- 1 full chest of teeth
-}
+local constructionPlan = {}
+if GetModConfigData("WargTailRequired") ~= 0 then
+    table.insert(
+        constructionPlan,
+        Ingredient("warg_tail", 1)
+    )
+end
+table.insert(
+    constructionPlan,
+    Ingredient("houndstooth", GetModConfigData("HoundsTeethToBuildRepulser"))
+)
+GLOBAL.CONSTRUCTION_PLANS[target_prefab] = constructionPlan
+
 
 local function activateRepulser(inst)
     GLOBAL.c_announce("Leave us be, hounds")

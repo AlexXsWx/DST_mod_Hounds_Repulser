@@ -10,6 +10,16 @@ This mod allows to disable hound waves in "late" game in a slightly challenging 
 2. Use the tail and 360 hounds teeth (9 stacks aka one chest) to modify any Hound Mound. Beware of hounds that spawn from that mound!  
 3. From that point, as long as the mound is not destroyed, hound waves are disabled. Hounds outside the waves are not affected anyhow.  
 
+# Mod configuration
+
+You can choose:  
+* Amount of hounds teeth required
+* Whether the Warg's tail is required
+* The drop rate for the Warg's tail (or disable it completely)
+* To make modification to Houndius Shootius instead of a Hound Mound. Please note that changing the target structure will remove effect from already modified ones (even if modification is not complete)  
+
+Also please note that once you add resources to the construction, there is no way to get them back, even if you change any mod settings.  
+
 # Known issues
 
 * Crafting recipe does not render the tail ingredient
